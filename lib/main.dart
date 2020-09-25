@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:prueba_vacant_flutter/user_box_list.dart';
+import 'package:prueba_vacant_flutter/user_list.dart';
 import './models/user.dart';
 import 'package:http/http.dart' as http;
 
@@ -94,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
           future: widget.users,
           builder: (context, snapshot) {
             if (snapshot.hasError) print(snapshot.error);
-            return snapshot.hasData ? UserBoxList(users: snapshot.data) : Center(child: CircularProgressIndicator());
+            return snapshot.hasData ? UserList(users: snapshot.data) : Center(child: CircularProgressIndicator());
           },
         ),
       ),

@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:prueba_vacant_flutter/user_detail.dart';
 
 import 'models/user.dart';
 
-class UserBoxList extends StatelessWidget {
+class UserList extends StatelessWidget {
   final List<User> users;
 
-  UserBoxList({Key key, this.users});
+  UserList({Key key, this.users});
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +25,15 @@ class UserBoxList extends StatelessWidget {
             ),
           ),
           onTap: () {
-            // Navigator.push(context, MaterialPageRoute(builder: (context) = gt; UserPage(item: users[index]),),);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => UserDetail(user: users[index]),
+              ),
+            );
           },
         );
       },
     );
   }
-
 }
