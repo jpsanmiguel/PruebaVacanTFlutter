@@ -22,51 +22,53 @@ class UserDetail extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Expanded(
-                        flex: 1,
+                      Container(
                         child: CircleAvatar(
                           radius: 50,
-                          backgroundImage: AssetImage(
-                            'assets/avatar.png',
+                          backgroundImage: NetworkImage(
+                            'https://www.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-circle-512.png',
                           ),
-                          backgroundColor: Colors.black,
                         ),
+                        padding: EdgeInsets.all(8.0),
                       ),
                       Expanded(
                         flex: 2,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "${user.name}",
-                              style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-                            ),
-                            Row(
-                              children: [
-                                Text("Username:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                Text(" ${user.username}"),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Text("Email:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                Text(" ${user.email}"),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Text("Phone:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                Text(" ${user.phone}"),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Text("Website:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                Text(" ${user.website}"),
-                              ],
-                            ),
-                          ],
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "${user.name}",
+                                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                              ),
+                              Row(
+                                children: [
+                                  Text("Username:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text(" ${user.username}"),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text("Email:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text(" ${user.email}"),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text("Phone:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text(" ${user.phone}"),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text("Website:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text(" ${user.website}"),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       )
                     ],

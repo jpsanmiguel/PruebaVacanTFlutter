@@ -21,13 +21,36 @@ class UserList extends StatelessWidget {
               leading: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  FlutterLogo(
-                    size: 48.0,
+                  Container(
+                    child: CircleAvatar(
+                      radius: 26,
+                      backgroundImage: NetworkImage(
+                        'https://www.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-circle-512.png',
+                      ),
+                    ),
                   ),
                 ],
               ),
-              title: Text(user.name),
-              subtitle: Text("Email: ${user.email}\nPhone: ${user.phone}"),
+              title: Text(
+                user.name,
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              ),
+              subtitle: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text("Email:", style: TextStyle(fontWeight: FontWeight.bold)),
+                      Text(" ${user.email}"),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text("Phone:", style: TextStyle(fontWeight: FontWeight.bold)),
+                      Text(" ${user.phone}"),
+                    ],
+                  ),
+                ],
+              ),
               isThreeLine: true,
             ),
           ),
