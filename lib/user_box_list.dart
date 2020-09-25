@@ -13,8 +13,16 @@ class UserBoxList extends StatelessWidget {
     return ListView.builder(
       itemCount: users.length,
       itemBuilder: (context, index) {
+        User user = users[index];
         return GestureDetector(
-          child: Text(users[index].address.city),
+          child: Card(
+            child: ListTile(
+              leading: FlutterLogo(),
+              title: Text(user.name),
+              subtitle: Text("Email: ${user.email}\nPhone: ${user.phone}"),
+              isThreeLine: true,
+            ),
+          ),
           onTap: () {
             // Navigator.push(context, MaterialPageRoute(builder: (context) = gt; UserPage(item: users[index]),),);
           },
