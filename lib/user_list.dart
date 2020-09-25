@@ -18,7 +18,14 @@ class UserList extends StatelessWidget {
         return GestureDetector(
           child: Card(
             child: ListTile(
-              leading: FlutterLogo(),
+              leading: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FlutterLogo(
+                    size: 48.0,
+                  ),
+                ],
+              ),
               title: Text(user.name),
               subtitle: Text("Email: ${user.email}\nPhone: ${user.phone}"),
               isThreeLine: true,
