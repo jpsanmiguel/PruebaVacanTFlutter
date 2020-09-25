@@ -43,29 +43,42 @@ class UserDetail extends StatelessWidget {
                                 "${user.name}",
                                 style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                               ),
-                              Row(
-                                children: [
-                                  Text("Username:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                  Text(" ${user.username}"),
-                                ],
+
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 1.0),
+                                child: Row(
+                                  children: [
+                                    Text("Username:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                    Text(" ${user.username}"),
+                                  ],
+                                ),
                               ),
-                              Row(
-                                children: [
-                                  Text("Email:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                  Text(" ${user.email}"),
-                                ],
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 1.0),
+                                child: Row(
+                                  children: [
+                                    Text("Email:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                    Text(" ${user.email}"),
+                                  ],
+                                ),
                               ),
-                              Row(
-                                children: [
-                                  Text("Phone:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                  Text(" ${user.phone}"),
-                                ],
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 1.0),
+                                child: Row(
+                                  children: [
+                                    Text("Phone:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                    Text(" ${user.phone}"),
+                                  ],
+                                ),
                               ),
-                              Row(
-                                children: [
-                                  Text("Website:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                  Text(" ${user.website}"),
-                                ],
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 1.0),
+                                child: Row(
+                                  children: [
+                                    Text("Website:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                    Text(" ${user.website}"),
+                                  ],
+                                ),
                               ),
                             ],
                           ),
@@ -98,35 +111,50 @@ class UserDetail extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Row(
-                              children: [
-                                Text("City:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                Text(" ${user.address.city}"),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 1.0),
+                              child: Row(
+                                children: [
+                                  Text("City:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text(" ${user.address.city}"),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text("Street:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                Text(" ${user.address.street}"),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 1.0),
+                              child: Row(
+                                children: [
+                                  Text("Street:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text(" ${user.address.street}"),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text("Suite:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                Text(" ${user.address.suite}"),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 1.0),
+                              child: Row(
+                                children: [
+                                  Text("Suite:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text(" ${user.address.suite}"),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text("Zip code:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                Text(" ${user.address.zipcode}"),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 1.0),
+                              child: Row(
+                                children: [
+                                  Text("Zip code:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text(" ${user.address.zipcode}"),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text("Geolocation:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                Text(" (Latitude: ${user.address.geo.lat}, Longitude: ${user.address.geo.lng})"),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 1.0),
+                              child: Row(
+                                children: [
+                                  Text("Geolocation:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text(" (Latitude: ${user.address.geo.lat}, Longitude: ${user.address.geo.lng})"),
+                                ],
+                              ),
                             ),
                           ],
                         ),
@@ -158,23 +186,32 @@ class UserDetail extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Row(
-                              children: [
-                                Text("Name:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                Text(" ${user.company.name}"),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 1.0),
+                              child: Row(
+                                children: [
+                                  Text("Name:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text(" ${user.company.name}"),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text("Catch phrase:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                Text(" ${user.company.catchPhrase}"),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 1.0),
+                              child: Row(
+                                children: [
+                                  Text("Catch phrase:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text(" ${user.company.catchPhrase}"),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Text("Business:", style: TextStyle(fontWeight: FontWeight.bold)),
-                                Text(" ${user.company.bs}"),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 1.0),
+                              child: Row(
+                                children: [
+                                  Text("Business:", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text(" ${user.company.bs}"),
+                                ],
+                              ),
                             ),
                           ],
                         ),
