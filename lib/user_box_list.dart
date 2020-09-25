@@ -14,7 +14,7 @@ class UserBoxList extends StatelessWidget {
       itemCount: users.length,
       itemBuilder: (context, index) {
         return GestureDetector(
-          child: Text(users[index].name),
+          child: Text(users[index].address.city),
           onTap: () {
             // Navigator.push(context, MaterialPageRoute(builder: (context) = gt; UserPage(item: users[index]),),);
           },

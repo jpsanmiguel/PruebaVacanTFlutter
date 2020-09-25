@@ -6,12 +6,12 @@ class User {
   final String name;
   final String username;
   final String email;
-  // final Address address;
+  final Address address;
   final String phone;
   final String website;
-  // final Company company;
+  final Company company;
 
-  User(this.id, this.name, this.username, this.email, this.phone, this.website);
+  User(this.id, this.name, this.username, this.email, this.address, this.phone, this.website, this.company);
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
@@ -19,10 +19,10 @@ class User {
       json['name'],
       json['username'],
       json['email'],
-      // json['address'],
+      Address.fromJson(json['address']),
       json['phone'],
       json['website'],
-      // json['company']
+      Company.fromJson(json['company'])
     );
   }
 }
